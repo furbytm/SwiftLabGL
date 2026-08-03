@@ -1,0 +1,8 @@
+Name: LabGL
+
+Namespaces:
+  - Name: gl
+
+Functions:
+  - Name: LABGLDISPATCH_glBegin
+    SwiftName: gl.begin(mode:)
