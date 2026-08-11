@@ -11,10 +11,12 @@ let package = Package(
   ],
   products: [
     .library(name: "LabGL", targets: ["LabGL"]),
+    .library(name: "LabFX", targets: ["LabFX"]),
+    .library(name: "LabText", targets: ["LabText"]),
     .executable(name: "LabGLExample", targets: ["LabGLExample"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.91.5"),
+    .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.91.9"),
   ],
   targets: [
     .executableTarget(
@@ -38,7 +40,6 @@ let package = Package(
         .product(name: "ImGui", package: "imgui"),
       ],
       path: ".",
-      exclude: ["LabGL/src/backend/metal/labgl_window_metal.mm"],
       sources: [
         "LabGL/src/core",
         "LabGL/src/backend/metal",
@@ -62,6 +63,29 @@ let package = Package(
         .linkedFramework("Metal"),
         .linkedFramework("QuartzCore"),
         .linkedFramework("Cocoa"),
+      ]
+    ),
+    .target(
+      name: "LabFX",
+      dependencies: [
+        .target(name: "LabGL"),
+        .target(name: "LabText"),
+      ],
+      path: "LabGL/showcase",
+      sources: [
+        "labfx/labfx_parser.cpp",
+        "labfx/labfx_runtime.cpp",
+      ],
+      publicHeadersPath: "labfx",
+      cxxSettings: [
+        .headerSearchPath("."),
+      ]
+    ),
+    .target(
+      name: "LabText",
+      path: "LabText",
+      cxxSettings: [
+        .define("LABTEXT_ODR")
       ]
     ),
   ],
