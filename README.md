@@ -1,4 +1,4 @@
-# LabGL
+# SwiftPM mirror of https://codeberg.org/meshula/LabGL
 
 This project starts from the idea of creating a fantasy graphics platform in the same spirit as QuadPlay and PICO-8. The fantasy is this:
 
