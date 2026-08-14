@@ -6,3 +6,7 @@ Namespaces:
 Functions:
   - Name: LABGLDISPATCH_glBegin
     SwiftName: gl.begin(mode:)
+  - Name: LABGLDISPATCH_glTonemap
+    SwiftName: gl.tonemap(_:)
+  - Name: LABGLDISPATCH_lglGetTonemapString
+    SwiftName: gl.tonemapString(for:)

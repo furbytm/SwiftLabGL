@@ -12,11 +12,13 @@ let package = Package(
   products: [
     .library(name: "LabGL", targets: ["LabGL"]),
     .library(name: "LabFX", targets: ["LabFX"]),
+    .library(name: "LabFXShaders", targets: ["LabFXShaders"]),
+    .library(name: "LabFXParser", targets: ["LabFXParser"]),
     .library(name: "LabText", targets: ["LabText"]),
     .executable(name: "LabGLExample", targets: ["LabGLExample"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.91.9"),
+    .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.92.0"),
   ],
   targets: [
     .executableTarget(
@@ -26,6 +28,7 @@ let package = Package(
         .interoperabilityMode(.Cxx)
       ]
     ),
+
     .target(
       name: "CNanocolor",
       path: "Nanocolor",
@@ -33,6 +36,7 @@ let package = Package(
       sources: ["nanocolor.c", "nanocolorUtils.c"],
       publicHeadersPath: "."
     ),
+
     .target(
       name: "LabGL",
       dependencies: [
@@ -40,6 +44,9 @@ let package = Package(
         .product(name: "ImGui", package: "imgui"),
       ],
       path: ".",
+      exclude: [
+        "LabGL/build"
+      ],
       sources: [
         "LabGL/src/core",
         "LabGL/src/backend/metal",
@@ -65,15 +72,16 @@ let package = Package(
         .linkedFramework("Cocoa"),
       ]
     ),
+
     .target(
       name: "LabFX",
       dependencies: [
         .target(name: "LabGL"),
-        .target(name: "LabText"),
+        .target(name: "LabFXParser"),
+        .target(name: "LabFXShaders"),
       ],
       path: "LabGL/showcase",
       sources: [
-        "labfx/labfx_parser.cpp",
         "labfx/labfx_runtime.cpp",
       ],
       publicHeadersPath: "labfx",
@@ -81,6 +89,27 @@ let package = Package(
         .headerSearchPath("."),
       ]
     ),
+
+    .target(
+      name: "LabFXShaders",
+      dependencies: [
+        .target(name: "LabFXParser"),
+      ],
+      path: "LabGL/showcase/labfx/shaders",
+      sources: [
+        "labfx_shaders_tonemap.cpp",
+      ],
+      publicHeadersPath: "."
+    ),
+    
+    .target(
+      name: "LabFXParser",
+      dependencies: [
+        .target(name: "LabText"),
+      ],
+      path: "LabFXParser"
+    ),
+
     .target(
       name: "LabText",
       path: "LabText",
