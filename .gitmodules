@@ -1,7 +1,6 @@
 [submodule "LabGL"]
 	path = LabGL
-	url = https://codeberg.org/furbytm/LabGL.git
-	branch = feat/compute-msl-glsl
+	url = https://codeberg.org/meshula/LabGL.git
 [submodule "Nanocolor"]
 	path = Nanocolor
 	url = https://github.com/meshula/Nanocolor.git
