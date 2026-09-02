@@ -98,6 +98,8 @@ let package = Package(
       path: "LabGL/showcase/labfx/shaders",
       sources: [
         "labfx_shaders_tonemap.cpp",
+        "labfx_shaders_sky.cpp",
+        "labfx_shaders_sky_data.cpp",
       ],
       publicHeadersPath: "."
     ),
