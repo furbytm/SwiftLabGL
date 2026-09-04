@@ -100,6 +100,7 @@ let package = Package(
         "labfx_shaders_tonemap.cpp",
         "labfx_shaders_sky.cpp",
         "labfx_shaders_sky_data.cpp",
+        "labfx_shaders_ibl.cpp",
       ],
       publicHeadersPath: "."
     ),
