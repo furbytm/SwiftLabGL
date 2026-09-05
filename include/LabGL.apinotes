@@ -4,9 +4,942 @@ Namespaces:
   - Name: gl
 
 Functions:
+  # --- Core GL 1.x ---
+  - Name: LABGLDISPATCH_glAccum
+    SwiftName: gl.accum(op:value:)
+  - Name: LABGLDISPATCH_glAlphaFunc
+    SwiftName: gl.alphaFunc(func:ref:)
+  - Name: LABGLDISPATCH_glAnnotation
+    SwiftName: gl.annotation(_:)
+  - Name: LABGLDISPATCH_glAreTexturesResident
+    SwiftName: gl.areTexturesResident(count:textures:residences:)
+  - Name: LABGLDISPATCH_glArrayElement
+    SwiftName: gl.arrayElement(_:)
+  - Name: LABGLDISPATCH_glActiveTexture
+    SwiftName: gl.activeTexture(_:)
   - Name: LABGLDISPATCH_glBegin
     SwiftName: gl.begin(mode:)
+  - Name: LABGLDISPATCH_glBindTexture
+    SwiftName: gl.bindTexture(target:texture:)
+  - Name: LABGLDISPATCH_glBreak
+    SwiftName: gl.breakpoint(label:)
+  - Name: LABGLDISPATCH_glBitmap
+    SwiftName: gl.bitmap(width:height:xOrigin:yOrigin:xMove:yMove:bitmap:)
+  - Name: LABGLDISPATCH_glBlendFunc
+    SwiftName: gl.blendFunc(src:dst:)
+  - Name: LABGLDISPATCH_glCallList
+    SwiftName: gl.callList(_:)
+  - Name: LABGLDISPATCH_glCallLists
+    SwiftName: gl.callLists(count:type:lists:)
+  - Name: LABGLDISPATCH_glClear
+    SwiftName: gl.clear(mask:)
+  - Name: LABGLDISPATCH_glClearAccum
+    SwiftName: gl.clearAccum(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glClearColor
+    SwiftName: gl.clearColor(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glClearDepth
+    SwiftName: gl.clearDepth(_:)
+  - Name: LABGLDISPATCH_glClearIndex
+    SwiftName: gl.clearIndex(_:)
+  - Name: LABGLDISPATCH_glClearStencil
+    SwiftName: gl.clearStencil(_:)
+  - Name: LABGLDISPATCH_glClipPlane
+    SwiftName: gl.clipPlane(_:equation:)
+
+  # --- Color (b/d/f/i/s/ub/ui/us x 3/4-component x scalar/vector -> 4 selectors) ---
+  - Name: LABGLDISPATCH_glColor3b
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3bv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3d
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3dv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3f
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3fv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3i
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3iv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3s
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3sv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3ub
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3ubv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3ui
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3uiv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor3us
+    SwiftName: gl.color(red:green:blue:)
+  - Name: LABGLDISPATCH_glColor3usv
+    SwiftName: gl.color(rgb:)
+  - Name: LABGLDISPATCH_glColor4b
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4bv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4d
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4dv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4f
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4fv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4i
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4iv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4s
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4sv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4ub
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4ubv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4ui
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4uiv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColor4us
+    SwiftName: gl.color(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColor4usv
+    SwiftName: gl.color(rgba:)
+  - Name: LABGLDISPATCH_glColorMask
+    SwiftName: gl.colorMask(red:green:blue:alpha:)
+  - Name: LABGLDISPATCH_glColorMaterial
+    SwiftName: gl.colorMaterial(face:mode:)
+  - Name: LABGLDISPATCH_glColorPointer
+    SwiftName: gl.colorPointer(size:type:stride:pointer:)
+  - Name: LABGLDISPATCH_glCopyPixels
+    SwiftName: gl.copyPixels(x:y:width:height:type:)
+  - Name: LABGLDISPATCH_glCopyTexImage1D
+    SwiftName: gl.copyTexImage1D(target:level:internalFormat:x:y:width:border:)
+  - Name: LABGLDISPATCH_glCopyTexImage2D
+    SwiftName: gl.copyTexImage2D(target:level:internalFormat:x:y:width:height:border:)
+  - Name: LABGLDISPATCH_glCopyTexSubImage1D
+    SwiftName: gl.copyTexSubImage1D(target:level:xOffset:x:y:width:)
+  - Name: LABGLDISPATCH_glCopyTexSubImage2D
+    SwiftName: gl.copyTexSubImage2D(target:level:xOffset:yOffset:x:y:width:height:)
+  - Name: LABGLDISPATCH_glCullFace
+    SwiftName: gl.cullFace(_:)
+  - Name: LABGLDISPATCH_glDebugDump
+    SwiftName: gl.debugDump(_:)
+  - Name: LABGLDISPATCH_glDeleteLists
+    SwiftName: gl.deleteLists(_:range:)
+  - Name: LABGLDISPATCH_glDeleteTextures
+    SwiftName: gl.deleteTextures(count:textures:)
+  - Name: LABGLDISPATCH_glDepthFunc
+    SwiftName: gl.depthFunc(_:)
+  - Name: LABGLDISPATCH_glDepthMask
+    SwiftName: gl.depthMask(_:)
+  - Name: LABGLDISPATCH_glDepthRange
+    SwiftName: gl.depthRange(near:far:)
+  - Name: LABGLDISPATCH_glDisable
+    SwiftName: gl.disable(_:)
+  - Name: LABGLDISPATCH_glDisableClientState
+    SwiftName: gl.disableClientState(_:)
+  - Name: LABGLDISPATCH_glDrawArrays
+    SwiftName: gl.drawArrays(mode:first:count:)
+  - Name: LABGLDISPATCH_glDrawBuffer
+    SwiftName: gl.drawBuffer(_:)
+  - Name: LABGLDISPATCH_glDrawElements
+    SwiftName: gl.drawElements(mode:count:type:indices:)
+  - Name: LABGLDISPATCH_glDrawPixels
+    SwiftName: gl.drawPixels(width:height:format:type:pixels:)
+  - Name: LABGLDISPATCH_glEdgeFlag
+    SwiftName: gl.edgeFlag(_:)
+  - Name: LABGLDISPATCH_glEdgeFlagPointer
+    SwiftName: gl.edgeFlagPointer(stride:pointer:)
+  - Name: LABGLDISPATCH_glEdgeFlagv
+    SwiftName: gl.edgeFlag(_:)
+  - Name: LABGLDISPATCH_glEnable
+    SwiftName: gl.enable(_:)
+  - Name: LABGLDISPATCH_glEnableClientState
+    SwiftName: gl.enableClientState(_:)
+  - Name: LABGLDISPATCH_glEnd
+    SwiftName: gl.end()
+  - Name: LABGLDISPATCH_glEndList
+    SwiftName: gl.endList()
+
+  # --- EvalCoord / EvalMesh / EvalPoint ---
+  - Name: LABGLDISPATCH_glEvalCoord1d
+    SwiftName: gl.evalCoord(u:)
+  - Name: LABGLDISPATCH_glEvalCoord1dv
+    SwiftName: gl.evalCoord(u:)
+  - Name: LABGLDISPATCH_glEvalCoord1f
+    SwiftName: gl.evalCoord(u:)
+  - Name: LABGLDISPATCH_glEvalCoord1fv
+    SwiftName: gl.evalCoord(u:)
+  - Name: LABGLDISPATCH_glEvalCoord2d
+    SwiftName: gl.evalCoord(u:v:)
+  - Name: LABGLDISPATCH_glEvalCoord2dv
+    SwiftName: gl.evalCoord(uv:)
+  - Name: LABGLDISPATCH_glEvalCoord2f
+    SwiftName: gl.evalCoord(u:v:)
+  - Name: LABGLDISPATCH_glEvalCoord2fv
+    SwiftName: gl.evalCoord(uv:)
+  - Name: LABGLDISPATCH_glEvalMesh1
+    SwiftName: gl.evalMesh(mode:i1:i2:)
+  - Name: LABGLDISPATCH_glEvalMesh2
+    SwiftName: gl.evalMesh(mode:i1:i2:j1:j2:)
+  - Name: LABGLDISPATCH_glEvalPoint1
+    SwiftName: gl.evalPoint(i:)
+  - Name: LABGLDISPATCH_glEvalPoint2
+    SwiftName: gl.evalPoint(i:j:)
+  - Name: LABGLDISPATCH_glFeedbackBuffer
+    SwiftName: gl.feedbackBuffer(size:type:buffer:)
+  - Name: LABGLDISPATCH_glFinish
+    SwiftName: gl.finish()
+  - Name: LABGLDISPATCH_glFlush
+    SwiftName: gl.flush()
+
+  # --- Fog ---
+  - Name: LABGLDISPATCH_glFogf
+    SwiftName: gl.fog(pname:param:)
+  - Name: LABGLDISPATCH_glFogfv
+    SwiftName: gl.fog(pname:params:)
+  - Name: LABGLDISPATCH_glFogi
+    SwiftName: gl.fog(pname:param:)
+  - Name: LABGLDISPATCH_glFogiv
+    SwiftName: gl.fog(pname:params:)
+  - Name: LABGLDISPATCH_glFrontFace
+    SwiftName: gl.frontFace(_:)
+  - Name: LABGLDISPATCH_glFrustum
+    SwiftName: gl.frustum(left:right:bottom:top:near:far:)
+  - Name: LABGLDISPATCH_glGenLists
+    SwiftName: gl.genLists(range:)
+  - Name: LABGLDISPATCH_glGenTextures
+    SwiftName: gl.genTextures(count:textures:)
+  - Name: LABGLDISPATCH_glHazard
+    SwiftName: gl.hazard(_:)
+
+  # --- Get* (kept as get-prefixed verbs; these fill an out-param, not true return values) ---
+  - Name: LABGLDISPATCH_glGetBooleanv
+    SwiftName: gl.getBooleans(pname:params:)
+  - Name: LABGLDISPATCH_glGetClipPlane
+    SwiftName: gl.getClipPlane(_:equation:)
+  - Name: LABGLDISPATCH_glGetDoublev
+    SwiftName: gl.getDoubles(pname:params:)
+  - Name: LABGLDISPATCH_glGetError
+    SwiftName: gl.error()
+  - Name: LABGLDISPATCH_glGetFloatv
+    SwiftName: gl.getFloats(pname:params:)
+  - Name: LABGLDISPATCH_glGetIntegerv
+    SwiftName: gl.getIntegers(pname:params:)
+  - Name: LABGLDISPATCH_glGetLightfv
+    SwiftName: gl.getLight(_:pname:params:)
+  - Name: LABGLDISPATCH_glGetLightiv
+    SwiftName: gl.getLight(_:pname:params:)
+  - Name: LABGLDISPATCH_glGetMapdv
+    SwiftName: gl.getMap(target:query:v:)
+  - Name: LABGLDISPATCH_glGetMapfv
+    SwiftName: gl.getMap(target:query:v:)
+  - Name: LABGLDISPATCH_glGetMapiv
+    SwiftName: gl.getMap(target:query:v:)
+  - Name: LABGLDISPATCH_glGetMaterialfv
+    SwiftName: gl.getMaterial(face:pname:params:)
+  - Name: LABGLDISPATCH_glGetMaterialiv
+    SwiftName: gl.getMaterial(face:pname:params:)
+  - Name: LABGLDISPATCH_glGetPixelMapfv
+    SwiftName: gl.getPixelMap(map:values:)
+  - Name: LABGLDISPATCH_glGetPixelMapuiv
+    SwiftName: gl.getPixelMap(map:values:)
+  - Name: LABGLDISPATCH_glGetPixelMapusv
+    SwiftName: gl.getPixelMap(map:values:)
+  - Name: LABGLDISPATCH_glGetPointerv
+    SwiftName: gl.getPointer(pname:params:)
+  - Name: LABGLDISPATCH_glGetPolygonStipple
+    SwiftName: gl.getPolygonStipple(_:)
+  - Name: LABGLDISPATCH_glGetString
+    SwiftName: gl.string(for:)
+  - Name: LABGLDISPATCH_glGetTexEnvfv
+    SwiftName: gl.getTexEnv(target:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexEnviv
+    SwiftName: gl.getTexEnv(target:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexGendv
+    SwiftName: gl.getTexGen(coord:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexGenfv
+    SwiftName: gl.getTexGen(coord:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexGeniv
+    SwiftName: gl.getTexGen(coord:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexImage
+    SwiftName: gl.getTexImage(target:level:format:type:pixels:)
+  - Name: LABGLDISPATCH_glGetTexLevelParameterfv
+    SwiftName: gl.getTexLevelParameter(target:level:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexLevelParameteriv
+    SwiftName: gl.getTexLevelParameter(target:level:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexParameterfv
+    SwiftName: gl.getTexParameter(target:pname:params:)
+  - Name: LABGLDISPATCH_glGetTexParameteriv
+    SwiftName: gl.getTexParameter(target:pname:params:)
+  - Name: LABGLDISPATCH_glHint
+    SwiftName: gl.hint(target:mode:)
+
+  # --- Index ---
+  - Name: LABGLDISPATCH_glIndexd
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexdv
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexf
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexfv
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexi
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexiv
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexs
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexsv
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexub
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glIndexubv
+    SwiftName: gl.index(_:)
+  - Name: LABGLDISPATCH_glInitNames
+    SwiftName: gl.initNames()
+  - Name: LABGLDISPATCH_glInterleavedArrays
+    SwiftName: gl.interleavedArrays(format:stride:pointer:)
+  - Name: LABGLDISPATCH_glIsEnabled
+    SwiftName: gl.isEnabled(_:)
+  - Name: LABGLDISPATCH_glIsList
+    SwiftName: gl.isList(_:)
+  - Name: LABGLDISPATCH_glIsTexture
+    SwiftName: gl.isTexture(_:)
+
+  # --- LightModel / Light ---
+  - Name: LABGLDISPATCH_glLightModelf
+    SwiftName: gl.lightModel(pname:param:)
+  - Name: LABGLDISPATCH_glLightModelfv
+    SwiftName: gl.lightModel(pname:params:)
+  - Name: LABGLDISPATCH_glLightModeli
+    SwiftName: gl.lightModel(pname:param:)
+  - Name: LABGLDISPATCH_glLightModeliv
+    SwiftName: gl.lightModel(pname:params:)
+  - Name: LABGLDISPATCH_glLightf
+    SwiftName: gl.light(_:pname:param:)
+  - Name: LABGLDISPATCH_glLightfv
+    SwiftName: gl.light(_:pname:params:)
+  - Name: LABGLDISPATCH_glLighti
+    SwiftName: gl.light(_:pname:param:)
+  - Name: LABGLDISPATCH_glLightiv
+    SwiftName: gl.light(_:pname:params:)
+  - Name: LABGLDISPATCH_glLineStipple
+    SwiftName: gl.lineStipple(factor:pattern:)
+  - Name: LABGLDISPATCH_glLineWidth
+    SwiftName: gl.lineWidth(_:)
+  - Name: LABGLDISPATCH_glListBase
+    SwiftName: gl.listBase(_:)
+  - Name: LABGLDISPATCH_glLoadIdentity
+    SwiftName: gl.loadIdentity()
+  - Name: LABGLDISPATCH_glLoadMatrixd
+    SwiftName: gl.loadMatrix(_:)
+  - Name: LABGLDISPATCH_glLoadMatrixf
+    SwiftName: gl.loadMatrix(_:)
+  - Name: LABGLDISPATCH_glLoadName
+    SwiftName: gl.loadName(_:)
+  - Name: LABGLDISPATCH_glLogicOp
+    SwiftName: gl.logicOp(_:)
+
+  # --- Map / MapGrid ---
+  - Name: LABGLDISPATCH_glMap1d
+    SwiftName: gl.map1(target:u1:u2:stride:order:points:)
+  - Name: LABGLDISPATCH_glMap1f
+    SwiftName: gl.map1(target:u1:u2:stride:order:points:)
+  - Name: LABGLDISPATCH_glMap2d
+    SwiftName: gl.map2(target:u1:u2:uStride:uOrder:v1:v2:vStride:vOrder:points:)
+  - Name: LABGLDISPATCH_glMap2f
+    SwiftName: gl.map2(target:u1:u2:uStride:uOrder:v1:v2:vStride:vOrder:points:)
+  - Name: LABGLDISPATCH_glMapGrid1d
+    SwiftName: gl.mapGrid1(un:u1:u2:)
+  - Name: LABGLDISPATCH_glMapGrid1f
+    SwiftName: gl.mapGrid1(un:u1:u2:)
+  - Name: LABGLDISPATCH_glMapGrid2d
+    SwiftName: gl.mapGrid2(un:u1:u2:vn:v1:v2:)
+  - Name: LABGLDISPATCH_glMapGrid2f
+    SwiftName: gl.mapGrid2(un:u1:u2:vn:v1:v2:)
+
+  # --- Material / Matrix ---
+  - Name: LABGLDISPATCH_glMaterialf
+    SwiftName: gl.material(face:pname:param:)
+  - Name: LABGLDISPATCH_glMaterialfv
+    SwiftName: gl.material(face:pname:params:)
+  - Name: LABGLDISPATCH_glMateriali
+    SwiftName: gl.material(face:pname:param:)
+  - Name: LABGLDISPATCH_glMaterialiv
+    SwiftName: gl.material(face:pname:params:)
+  - Name: LABGLDISPATCH_glMatrixMode
+    SwiftName: gl.matrixMode(_:)
+  - Name: LABGLDISPATCH_glMultMatrixd
+    SwiftName: gl.multMatrix(_:)
+  - Name: LABGLDISPATCH_glMultMatrixf
+    SwiftName: gl.multMatrix(_:)
+  - Name: LABGLDISPATCH_glNewList
+    SwiftName: gl.newList(_:mode:)
+
+  # --- Normal ---
+  - Name: LABGLDISPATCH_glNormal3b
+    SwiftName: gl.normal(x:y:z:)
+  - Name: LABGLDISPATCH_glNormal3bv
+    SwiftName: gl.normal(xyz:)
+  - Name: LABGLDISPATCH_glNormal3d
+    SwiftName: gl.normal(x:y:z:)
+  - Name: LABGLDISPATCH_glNormal3dv
+    SwiftName: gl.normal(xyz:)
+  - Name: LABGLDISPATCH_glNormal3f
+    SwiftName: gl.normal(x:y:z:)
+  - Name: LABGLDISPATCH_glNormal3fv
+    SwiftName: gl.normal(xyz:)
+  - Name: LABGLDISPATCH_glNormal3i
+    SwiftName: gl.normal(x:y:z:)
+  - Name: LABGLDISPATCH_glNormal3iv
+    SwiftName: gl.normal(xyz:)
+  - Name: LABGLDISPATCH_glNormal3s
+    SwiftName: gl.normal(x:y:z:)
+  - Name: LABGLDISPATCH_glNormal3sv
+    SwiftName: gl.normal(xyz:)
+  - Name: LABGLDISPATCH_glNormalPointer
+    SwiftName: gl.normalPointer(type:stride:pointer:)
+  - Name: LABGLDISPATCH_glOrtho
+    SwiftName: gl.ortho(left:right:bottom:top:near:far:)
+  - Name: LABGLDISPATCH_glPassThrough
+    SwiftName: gl.passThrough(_:)
+
+  # --- PixelMap / PixelStore / PixelTransfer / PixelZoom ---
+  - Name: LABGLDISPATCH_glPixelMapfv
+    SwiftName: gl.pixelMap(map:size:values:)
+  - Name: LABGLDISPATCH_glPixelMapuiv
+    SwiftName: gl.pixelMap(map:size:values:)
+  - Name: LABGLDISPATCH_glPixelMapusv
+    SwiftName: gl.pixelMap(map:size:values:)
+  - Name: LABGLDISPATCH_glPixelStoref
+    SwiftName: gl.pixelStore(pname:param:)
+  - Name: LABGLDISPATCH_glPixelStorei
+    SwiftName: gl.pixelStore(pname:param:)
+  - Name: LABGLDISPATCH_glPixelTransferf
+    SwiftName: gl.pixelTransfer(pname:param:)
+  - Name: LABGLDISPATCH_glPixelTransferi
+    SwiftName: gl.pixelTransfer(pname:param:)
+  - Name: LABGLDISPATCH_glPixelZoom
+    SwiftName: gl.pixelZoom(x:y:)
+  - Name: LABGLDISPATCH_glPointSize
+    SwiftName: gl.pointSize(_:)
+  - Name: LABGLDISPATCH_glPolygonMode
+    SwiftName: gl.polygonMode(face:mode:)
+  - Name: LABGLDISPATCH_glPolygonOffset
+    SwiftName: gl.polygonOffset(factor:units:)
+  - Name: LABGLDISPATCH_glPolygonStipple
+    SwiftName: gl.polygonStipple(_:)
+  - Name: LABGLDISPATCH_glPopAttrib
+    SwiftName: gl.popAttrib()
+  - Name: LABGLDISPATCH_glPopClientAttrib
+    SwiftName: gl.popClientAttrib()
+  - Name: LABGLDISPATCH_glPopMatrix
+    SwiftName: gl.popMatrix()
+  - Name: LABGLDISPATCH_glPopName
+    SwiftName: gl.popName()
+  - Name: LABGLDISPATCH_glPrioritizeTextures
+    SwiftName: gl.prioritizeTextures(count:textures:priorities:)
+  - Name: LABGLDISPATCH_glPushAttrib
+    SwiftName: gl.pushAttrib(_:)
+  - Name: LABGLDISPATCH_glPushClientAttrib
+    SwiftName: gl.pushClientAttrib(_:)
+  - Name: LABGLDISPATCH_glPushMatrix
+    SwiftName: gl.pushMatrix()
+  - Name: LABGLDISPATCH_glPushName
+    SwiftName: gl.pushName(_:)
+
+  # --- RasterPos ---
+  - Name: LABGLDISPATCH_glRasterPos2d
+    SwiftName: gl.rasterPos(x:y:)
+  - Name: LABGLDISPATCH_glRasterPos2dv
+    SwiftName: gl.rasterPos(xy:)
+  - Name: LABGLDISPATCH_glRasterPos2f
+    SwiftName: gl.rasterPos(x:y:)
+  - Name: LABGLDISPATCH_glRasterPos2fv
+    SwiftName: gl.rasterPos(xy:)
+  - Name: LABGLDISPATCH_glRasterPos2i
+    SwiftName: gl.rasterPos(x:y:)
+  - Name: LABGLDISPATCH_glRasterPos2iv
+    SwiftName: gl.rasterPos(xy:)
+  - Name: LABGLDISPATCH_glRasterPos2s
+    SwiftName: gl.rasterPos(x:y:)
+  - Name: LABGLDISPATCH_glRasterPos2sv
+    SwiftName: gl.rasterPos(xy:)
+  - Name: LABGLDISPATCH_glRasterPos3d
+    SwiftName: gl.rasterPos(x:y:z:)
+  - Name: LABGLDISPATCH_glRasterPos3dv
+    SwiftName: gl.rasterPos(xyz:)
+  - Name: LABGLDISPATCH_glRasterPos3f
+    SwiftName: gl.rasterPos(x:y:z:)
+  - Name: LABGLDISPATCH_glRasterPos3fv
+    SwiftName: gl.rasterPos(xyz:)
+  - Name: LABGLDISPATCH_glRasterPos3i
+    SwiftName: gl.rasterPos(x:y:z:)
+  - Name: LABGLDISPATCH_glRasterPos3iv
+    SwiftName: gl.rasterPos(xyz:)
+  - Name: LABGLDISPATCH_glRasterPos3s
+    SwiftName: gl.rasterPos(x:y:z:)
+  - Name: LABGLDISPATCH_glRasterPos3sv
+    SwiftName: gl.rasterPos(xyz:)
+  - Name: LABGLDISPATCH_glRasterPos4d
+    SwiftName: gl.rasterPos(x:y:z:w:)
+  - Name: LABGLDISPATCH_glRasterPos4dv
+    SwiftName: gl.rasterPos(xyzw:)
+  - Name: LABGLDISPATCH_glRasterPos4f
+    SwiftName: gl.rasterPos(x:y:z:w:)
+  - Name: LABGLDISPATCH_glRasterPos4fv
+    SwiftName: gl.rasterPos(xyzw:)
+  - Name: LABGLDISPATCH_glRasterPos4i
+    SwiftName: gl.rasterPos(x:y:z:w:)
+  - Name: LABGLDISPATCH_glRasterPos4iv
+    SwiftName: gl.rasterPos(xyzw:)
+  - Name: LABGLDISPATCH_glRasterPos4s
+    SwiftName: gl.rasterPos(x:y:z:w:)
+  - Name: LABGLDISPATCH_glRasterPos4sv
+    SwiftName: gl.rasterPos(xyzw:)
+  - Name: LABGLDISPATCH_glReadBuffer
+    SwiftName: gl.readBuffer(_:)
+  - Name: LABGLDISPATCH_glReadPixels
+    SwiftName: gl.readPixels(x:y:width:height:format:type:pixels:)
+
+  # --- Rect ---
+  - Name: LABGLDISPATCH_glRectd
+    SwiftName: gl.rect(x1:y1:x2:y2:)
+  - Name: LABGLDISPATCH_glRectdv
+    SwiftName: gl.rect(v1:v2:)
+  - Name: LABGLDISPATCH_glRectf
+    SwiftName: gl.rect(x1:y1:x2:y2:)
+  - Name: LABGLDISPATCH_glRectfv
+    SwiftName: gl.rect(v1:v2:)
+  - Name: LABGLDISPATCH_glRecti
+    SwiftName: gl.rect(x1:y1:x2:y2:)
+  - Name: LABGLDISPATCH_glRectiv
+    SwiftName: gl.rect(v1:v2:)
+  - Name: LABGLDISPATCH_glRects
+    SwiftName: gl.rect(x1:y1:x2:y2:)
+  - Name: LABGLDISPATCH_glRectsv
+    SwiftName: gl.rect(v1:v2:)
+  - Name: LABGLDISPATCH_glRenderMode
+    SwiftName: gl.renderMode(_:)
+
+  # --- Rotate / Scale / Translate / Scissor / Select / Shade / Stencil ---
+  - Name: LABGLDISPATCH_glRotated
+    SwiftName: gl.rotate(angle:x:y:z:)
+  - Name: LABGLDISPATCH_glRotatef
+    SwiftName: gl.rotate(angle:x:y:z:)
+  - Name: LABGLDISPATCH_glScaled
+    SwiftName: gl.scale(x:y:z:)
+  - Name: LABGLDISPATCH_glScalef
+    SwiftName: gl.scale(x:y:z:)
+  - Name: LABGLDISPATCH_glScissor
+    SwiftName: gl.scissor(x:y:width:height:)
+  - Name: LABGLDISPATCH_glSelectBuffer
+    SwiftName: gl.selectBuffer(size:buffer:)
+  - Name: LABGLDISPATCH_glShadeModel
+    SwiftName: gl.shadeModel(_:)
+  - Name: LABGLDISPATCH_glStencilFunc
+    SwiftName: gl.stencilFunc(func:ref:mask:)
+  - Name: LABGLDISPATCH_glStencilMask
+    SwiftName: gl.stencilMask(_:)
+  - Name: LABGLDISPATCH_glStencilOp
+    SwiftName: gl.stencilOp(fail:zfail:zpass:)
+
+  # --- TexCoord ---
+  - Name: LABGLDISPATCH_glTexCoord1d
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1dv
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1f
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1fv
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1i
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1iv
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1s
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord1sv
+    SwiftName: gl.texCoord(s:)
+  - Name: LABGLDISPATCH_glTexCoord2d
+    SwiftName: gl.texCoord(s:t:)
+  - Name: LABGLDISPATCH_glTexCoord2dv
+    SwiftName: gl.texCoord(st:)
+  - Name: LABGLDISPATCH_glTexCoord2f
+    SwiftName: gl.texCoord(s:t:)
+  - Name: LABGLDISPATCH_glTexCoord2fv
+    SwiftName: gl.texCoord(st:)
+  - Name: LABGLDISPATCH_glTexCoord2i
+    SwiftName: gl.texCoord(s:t:)
+  - Name: LABGLDISPATCH_glTexCoord2iv
+    SwiftName: gl.texCoord(st:)
+  - Name: LABGLDISPATCH_glTexCoord2s
+    SwiftName: gl.texCoord(s:t:)
+  - Name: LABGLDISPATCH_glTexCoord2sv
+    SwiftName: gl.texCoord(st:)
+  - Name: LABGLDISPATCH_glTexCoord3d
+    SwiftName: gl.texCoord(s:t:r:)
+  - Name: LABGLDISPATCH_glTexCoord3dv
+    SwiftName: gl.texCoord(str:)
+  - Name: LABGLDISPATCH_glTexCoord3f
+    SwiftName: gl.texCoord(s:t:r:)
+  - Name: LABGLDISPATCH_glTexCoord3fv
+    SwiftName: gl.texCoord(str:)
+  - Name: LABGLDISPATCH_glTexCoord3i
+    SwiftName: gl.texCoord(s:t:r:)
+  - Name: LABGLDISPATCH_glTexCoord3iv
+    SwiftName: gl.texCoord(str:)
+  - Name: LABGLDISPATCH_glTexCoord3s
+    SwiftName: gl.texCoord(s:t:r:)
+  - Name: LABGLDISPATCH_glTexCoord3sv
+    SwiftName: gl.texCoord(str:)
+  - Name: LABGLDISPATCH_glTexCoord4d
+    SwiftName: gl.texCoord(s:t:r:q:)
+  - Name: LABGLDISPATCH_glTexCoord4dv
+    SwiftName: gl.texCoord(strq:)
+  - Name: LABGLDISPATCH_glTexCoord4f
+    SwiftName: gl.texCoord(s:t:r:q:)
+  - Name: LABGLDISPATCH_glTexCoord4fv
+    SwiftName: gl.texCoord(strq:)
+  - Name: LABGLDISPATCH_glTexCoord4i
+    SwiftName: gl.texCoord(s:t:r:q:)
+  - Name: LABGLDISPATCH_glTexCoord4iv
+    SwiftName: gl.texCoord(strq:)
+  - Name: LABGLDISPATCH_glTexCoord4s
+    SwiftName: gl.texCoord(s:t:r:q:)
+  - Name: LABGLDISPATCH_glTexCoord4sv
+    SwiftName: gl.texCoord(strq:)
+  - Name: LABGLDISPATCH_glTexCoordPointer
+    SwiftName: gl.texCoordPointer(size:type:stride:pointer:)
+
+  # --- TexEnv / TexGen / TexImage / TexParameter / TexSubImage ---
+  - Name: LABGLDISPATCH_glTexEnvf
+    SwiftName: gl.texEnv(target:pname:param:)
+  - Name: LABGLDISPATCH_glTexEnvfv
+    SwiftName: gl.texEnv(target:pname:params:)
+  - Name: LABGLDISPATCH_glTexEnvi
+    SwiftName: gl.texEnv(target:pname:param:)
+  - Name: LABGLDISPATCH_glTexEnviv
+    SwiftName: gl.texEnv(target:pname:params:)
+  - Name: LABGLDISPATCH_glTexGend
+    SwiftName: gl.texGen(coord:pname:param:)
+  - Name: LABGLDISPATCH_glTexGendv
+    SwiftName: gl.texGen(coord:pname:params:)
+  - Name: LABGLDISPATCH_glTexGenf
+    SwiftName: gl.texGen(coord:pname:param:)
+  - Name: LABGLDISPATCH_glTexGenfv
+    SwiftName: gl.texGen(coord:pname:params:)
+  - Name: LABGLDISPATCH_glTexGeni
+    SwiftName: gl.texGen(coord:pname:param:)
+  - Name: LABGLDISPATCH_glTexGeniv
+    SwiftName: gl.texGen(coord:pname:params:)
+  - Name: LABGLDISPATCH_glTexImage1D
+    SwiftName: gl.texImage1D(target:level:internalFormat:width:border:format:type:pixels:)
+  - Name: LABGLDISPATCH_glTexImage2D
+    SwiftName: gl.texImage2D(target:level:internalFormat:width:height:border:format:type:pixels:)
+  - Name: LABGLDISPATCH_glTexParameterf
+    SwiftName: gl.texParameter(target:pname:param:)
+  - Name: LABGLDISPATCH_glTexParameterfv
+    SwiftName: gl.texParameter(target:pname:params:)
+  - Name: LABGLDISPATCH_glTexParameteri
+    SwiftName: gl.texParameter(target:pname:param:)
+  - Name: LABGLDISPATCH_glTexParameteriv
+    SwiftName: gl.texParameter(target:pname:params:)
+  - Name: LABGLDISPATCH_glTexSubImage1D
+    SwiftName: gl.texSubImage1D(target:level:xOffset:width:format:type:pixels:)
+  - Name: LABGLDISPATCH_glTexSubImage2D
+    SwiftName: gl.texSubImage2D(target:level:xOffset:yOffset:width:height:format:type:pixels:)
+  - Name: LABGLDISPATCH_glTranslated
+    SwiftName: gl.translate(x:y:z:)
+  - Name: LABGLDISPATCH_glTranslatef
+    SwiftName: gl.translate(x:y:z:)
+  - Name: LABGLDISPATCH_glGenerateMipmap
+    SwiftName: gl.generateMipmap(_:)
+
+  # --- Vertex ---
+  - Name: LABGLDISPATCH_glVertex2d
+    SwiftName: gl.vertex(x:y:)
+  - Name: LABGLDISPATCH_glVertex2dv
+    SwiftName: gl.vertex(xy:)
+  - Name: LABGLDISPATCH_glVertex2f
+    SwiftName: gl.vertex(x:y:)
+  - Name: LABGLDISPATCH_glVertex2fv
+    SwiftName: gl.vertex(xy:)
+  - Name: LABGLDISPATCH_glVertex2i
+    SwiftName: gl.vertex(x:y:)
+  - Name: LABGLDISPATCH_glVertex2iv
+    SwiftName: gl.vertex(xy:)
+  - Name: LABGLDISPATCH_glVertex2s
+    SwiftName: gl.vertex(x:y:)
+  - Name: LABGLDISPATCH_glVertex2sv
+    SwiftName: gl.vertex(xy:)
+  - Name: LABGLDISPATCH_glVertex3d
+    SwiftName: gl.vertex(x:y:z:)
+  - Name: LABGLDISPATCH_glVertex3dv
+    SwiftName: gl.vertex(xyz:)
+  - Name: LABGLDISPATCH_glVertex3f
+    SwiftName: gl.vertex(x:y:z:)
+  - Name: LABGLDISPATCH_glVertex3fv
+    SwiftName: gl.vertex(xyz:)
+  - Name: LABGLDISPATCH_glVertex3i
+    SwiftName: gl.vertex(x:y:z:)
+  - Name: LABGLDISPATCH_glVertex3iv
+    SwiftName: gl.vertex(xyz:)
+  - Name: LABGLDISPATCH_glVertex3s
+    SwiftName: gl.vertex(x:y:z:)
+  - Name: LABGLDISPATCH_glVertex3sv
+    SwiftName: gl.vertex(xyz:)
+  - Name: LABGLDISPATCH_glVertex4d
+    SwiftName: gl.vertex(x:y:z:w:)
+  - Name: LABGLDISPATCH_glVertex4dv
+    SwiftName: gl.vertex(xyzw:)
+  - Name: LABGLDISPATCH_glVertex4f
+    SwiftName: gl.vertex(x:y:z:w:)
+  - Name: LABGLDISPATCH_glVertex4fv
+    SwiftName: gl.vertex(xyzw:)
+  - Name: LABGLDISPATCH_glVertex4i
+    SwiftName: gl.vertex(x:y:z:w:)
+  - Name: LABGLDISPATCH_glVertex4iv
+    SwiftName: gl.vertex(xyzw:)
+  - Name: LABGLDISPATCH_glVertex4s
+    SwiftName: gl.vertex(x:y:z:w:)
+  - Name: LABGLDISPATCH_glVertex4sv
+    SwiftName: gl.vertex(xyzw:)
+  - Name: LABGLDISPATCH_glVertexPointer
+    SwiftName: gl.vertexPointer(size:type:stride:pointer:)
+  - Name: LABGLDISPATCH_glViewport
+    SwiftName: gl.viewport(x:y:width:height:)
+
+  # --- EXT ---
+  - Name: LABGLDISPATCH_glLockArraysEXT
+    SwiftName: gl.lockArraysEXT(first:count:)
+  - Name: LABGLDISPATCH_glUnlockArraysEXT
+    SwiftName: gl.unlockArraysEXT()
+  - Name: LABGLDISPATCH_glColorTableEXT
+    SwiftName: gl.colorTableEXT(target:internalFormat:width:format:type:table:)
+
+  # --- GLU subset ---
+  - Name: LABGLDISPATCH_gluLookAt
+    SwiftName: gl.lookAt(eyeX:eyeY:eyeZ:centerX:centerY:centerZ:upX:upY:upZ:)
+
+  # --- LabGL instance drawing ---
+  - Name: LABGLDISPATCH_glInstancedDrawElements
+    SwiftName: gl.instancedDrawElements(handle:mode:count:type:indices:drawCount:)
+  - Name: LABGLDISPATCH_glGenInstanceTransforms
+    SwiftName: gl.genInstanceTransforms(count:)
+  - Name: LABGLDISPATCH_glDeleteInstanceTransforms
+    SwiftName: gl.deleteInstanceTransforms(count:handles:)
+  - Name: LABGLDISPATCH_glInstanceTransformsData
+    SwiftName: gl.instanceTransformsData(handle:size:transforms:cullRadius:usage:)
+
+  # --- LabGL capture system ---
+  - Name: LABGLDISPATCH_glCallCapture
+    SwiftName: gl.callCapture(_:)
+
+  # --- LabGL shader hint ---
+  - Name: LABGLDISPATCH_lglSetShader
+    SwiftName: gl.setShader(_:texture0:texture1:)
+
+  # --- LabGL color spaces ---
+  - Name: LABGLDISPATCH_glGenColorSpace
+    SwiftName: gl.genColorSpace(name:)
+  - Name: LABGLDISPATCH_glBindColorSpace
+    SwiftName: gl.bindColorSpace(domain:id:)
+
+  # --- LabGL tonemap ---
   - Name: LABGLDISPATCH_glTonemap
     SwiftName: gl.tonemap(_:)
+  - Name: LABGLDISPATCH_lglGetTonemapMatrices
+    SwiftName: gl.getTonemapMatrices(framebufferToTonemap:tonemapToDisplay:)
   - Name: LABGLDISPATCH_lglGetTonemapString
     SwiftName: gl.tonemapString(for:)
+
+  # --- LabGL font ---
+  - Name: LABGLDISPATCH_glFont
+    SwiftName: gl.font(path:pointSize:)
+  - Name: LABGLDISPATCH_glText
+    SwiftName: gl.text(x:y:z:_:)
+  - Name: LABGLDISPATCH_glTextAt
+    SwiftName: gl.textAt(_:)
+  - Name: LABGLDISPATCH_glTextAdvanceEm
+    SwiftName: gl.textAdvanceEm(_:)
+  - Name: LABGLDISPATCH_glFontInit
+    SwiftName: gl.fontInit()
+  - Name: LABGLDISPATCH_glFontShutdown
+    SwiftName: gl.fontShutdown()
+
+  # --- LabGL sprite primitive ---
+  - Name: LABGLDISPATCH_glSpritePointer
+    SwiftName: gl.spritePointer(size:type:stride:pointer:)
+  - Name: LABGLDISPATCH_glSpritePivotPointer
+    SwiftName: gl.spritePivotPointer(size:type:stride:pointer:)
+  - Name: LABGLDISPATCH_glSpriteSortMode
+    SwiftName: gl.spriteSortMode(_:)
+  - Name: LABGLDISPATCH_glSpriteBillboardMode
+    SwiftName: gl.spriteBillboardMode(_:)
+  - Name: LABGLDISPATCH_glSpriteBillboardAxis
+    SwiftName: gl.spriteBillboardAxis(x:y:z:)
+
+  # --- LabGL render targets ---
+  - Name: LABGLDISPATCH_glGenRenderTarget
+    SwiftName: gl.genRenderTarget(hasDepth:target:)
+  - Name: LABGLDISPATCH_glDeleteRenderTarget
+    SwiftName: gl.deleteRenderTarget(_:)
+  - Name: LABGLDISPATCH_glRenderTargetTexture
+    SwiftName: gl.renderTargetTexture(target:attachment:texture:)
+  - Name: LABGLDISPATCH_glBindRenderTarget
+    SwiftName: gl.bindRenderTarget(_:)
+  - Name: LABGLDISPATCH_glGetRootRenderTarget
+    SwiftName: gl.rootRenderTarget()
+
+  # --- LabGL managed buffer objects ---
+  - Name: LABGLDISPATCH_glBindBuffer
+    SwiftName: gl.bindBuffer(target:buffer:)
+  - Name: LABGLDISPATCH_lglCreateBuffer
+    SwiftName: gl.createBuffer(usage:sizeBytes:)
+  - Name: LABGLDISPATCH_lglDeleteBuffer
+    SwiftName: gl.deleteBuffer(_:)
+  - Name: LABGLDISPATCH_lglMapBuffer
+    SwiftName: gl.mapBuffer(_:)
+  - Name: LABGLDISPATCH_lglUnmapBuffer
+    SwiftName: gl.unmapBuffer(_:)
+  - Name: LABGLDISPATCH_lglGetBufferSize
+    SwiftName: gl.bufferSize(for:)
+
+  # --- LabGL alien-pipeline backdoor (custom shader pairs) ---
+  - Name: LABGLDISPATCH_lglDefineShader
+    SwiftName: gl.defineShader(name:vertexGLSL:fragmentGLSL:vertexMSL:fragmentMSL:)
+  - Name: LABGLDISPATCH_lglDeleteShader
+    SwiftName: gl.deleteShader(_:)
+  - Name: LABGLDISPATCH_lglUseShader
+    SwiftName: gl.useShader(_:)
+  - Name: LABGLDISPATCH_lglShaderUniform
+    SwiftName: gl.setShaderUniform(_:name:type:data:)
+  - Name: LABGLDISPATCH_lglGetShaderUniformSize
+    SwiftName: gl.shaderUniformSize(for:)
+
+  # --- LabGL uniform buffer layout ---
+  - Name: LABGLDISPATCH_lglGetUniformLayout
+    SwiftName: gl.uniformLayout(for:)
+  - Name: LABGLDISPATCH_lglAlignUp
+    SwiftName: gl.alignUp(_:to:)
+  - Name: LABGLDISPATCH_lglPackIntoBuffer
+    SwiftName: gl.packIntoBuffer(_:type:from:)
+
+  # --- LabGL compute shaders ---
+  - Name: LABGLDISPATCH_lglDefineComputeShader
+    SwiftName: gl.defineComputeShader(name:glsl:msl:)
+  - Name: LABGLDISPATCH_lglDeleteComputeShader
+    SwiftName: gl.deleteComputeShader(_:)
+  - Name: LABGLDISPATCH_lglComputeShaderUniform
+    SwiftName: gl.setComputeShaderUniform(_:name:type:data:)
+  - Name: LABGLDISPATCH_lglComputeShaderBuffer
+    SwiftName: gl.setComputeShaderBuffer(_:binding:buffer:)
+  - Name: LABGLDISPATCH_lglComputeShaderImage
+    SwiftName: gl.setComputeShaderImage(_:index:texture:format:level:)
+  - Name: LABGLDISPATCH_lglComputeShaderImageLayered
+    SwiftName: gl.setComputeShaderImage(_:index:texture:format:layered:level:)
+  - Name: LABGLDISPATCH_lglComputeShaderSampler
+    SwiftName: gl.setComputeShaderSampler(_:index:texture:samplerIndex:)
+  - Name: LABGLDISPATCH_lglComputeShaderThreadgroupSize
+    SwiftName: gl.setComputeShaderThreadgroupSize(_:x:y:z:)
+  - Name: LABGLDISPATCH_lglDispatchCompute
+    SwiftName: gl.dispatchCompute(_:groupsX:groupsY:groupsZ:)
+
+  # --- LabGL math rendering ---
+  - Name: LABGLDISPATCH_glTextMath
+    SwiftName: gl.textMath(x:y:fontDir:mathFont:pointSize:latex:)
+
+  # --- LabGL window management (labgl_window.h) ---
+  - Name: labgl_setWindowHints
+    SwiftName: labgl.setWindowHints()
+  - Name: labgl_present
+    SwiftName: labgl.present(_:)
+  - Name: labgl_resize
+    SwiftName: labgl.resize(_:width:height:)
+  - Name: labgl_beginFrame
+    SwiftName: labgl.beginFrame(_:)
+  - Name: labgl_destroyWindow
+    SwiftName: labgl.destroyWindow(_:)
+  - Name: labgl_attachOffscreen
+    SwiftName: labgl.attachOffscreen(width:height:)
+  - Name: labgl_attachCAMetalLayer
+    SwiftName: labgl.attach(layer:width:height:)
+  - Name: labgl_attachWindow
+    SwiftName: labgl.attach(window:width:height:)
+
+  # --- LabGL capture system (labgl_capture.h) ---
+  - Name: labgl_captureCreate
+    SwiftName: labgl.captureCreate()
+  - Name: labgl_captureDestroy
+    SwiftName: labgl.captureDestroy(_:)
+  - Name: labgl_captureClear
+    SwiftName: labgl.captureClear(_:)
+  - Name: labgl_captureStart
+    SwiftName: labgl.captureStart(_:)
+  - Name: labgl_captureStop
+    SwiftName: labgl.captureStop()
+  - Name: labgl_captureActive
+    SwiftName: labgl.captureActive()
+  - Name: labgl_captureSave
+    SwiftName: labgl.captureSave(_:path:)
+  - Name: labgl_captureLoad
+    SwiftName: labgl.captureLoad(_:path:)
+  - Name: labgl_captureSaveSelective
+    SwiftName: labgl.captureSaveSelective(_:enabled:count:path:)
+  - Name: labgl_capturePlayback
+    SwiftName: labgl.capturePlayback(_:)
+  - Name: labgl_capturePlaybackSelective
+    SwiftName: labgl.capturePlaybackSelective(_:enabled:count:)
+  - Name: labgl_captureFormatCommand
+    SwiftName: labgl.captureFormatCommand(_:index:into:size:)
+  - Name: labgl_captureSetVerbose
+    SwiftName: labgl.setCaptureVerbose(_:)
+  - Name: labgl_captureReportHazards
+    SwiftName: labgl.reportCaptureHazards(_:)
+  - Name: labgl_captureStats
+    SwiftName: labgl.captureStats(_:)
+  - Name: labgl_breakHook
+    SwiftName: labgl.breakHook(_:)
+  - Name: labgl_captureGetCommands
+    SwiftName: labgl.captureCommands(_:count:)
+  - Name: labgl_captureGetString
+    SwiftName: labgl.captureString(_:at:)
+  - Name: labgl_captureGetBlobData
+    SwiftName: labgl.captureBlobData(_:size:)
+  - Name: labgl_captureGetPreambleTextures
+    SwiftName: labgl.capturePreambleTextures(_:count:)
+  - Name: labgl_resetToRedBookDefaults
+    SwiftName: labgl.resetToRedBookDefaults()
+  - Name: labgl_captureEmitPreamble
+    SwiftName: labgl.captureEmitPreamble()
+  - Name: labgl_captureGeneration
+    SwiftName: labgl.captureGeneration(_:)
+  - Name: labgl_captureCommandCount
+    SwiftName: labgl.captureCommandCount(_:)
+  - Name: labgl_captureTexturesCount
+    SwiftName: labgl.captureTexturesCount(_:)
+  - Name: labgl_captureGetSize
+    SwiftName: labgl.captureSize(_:width:height:)
+  - Name: labgl_captureSetSize
+    SwiftName: labgl.setCaptureSize(_:width:height:)
+  - Name: labgl_captureGetWindowSize
+    SwiftName: labgl.captureWindowSize(_:width:height:)
+  - Name: labgl_captureSetWindowSize
+    SwiftName: labgl.setCaptureWindowSize(_:width:height:)
+
+  # --- LabGL software matrix stack inspection (labgl_dispatch.h) ---
+  - Name: labgl_getMatrix
+    SwiftName: labgl.getMatrix(mode:into:)
+  - Name: labgl_getMatrixDepth
+    SwiftName: labgl.matrixDepth(mode:)
+  - Name: labgl_getMatrixMode
+    SwiftName: labgl.matrixMode()

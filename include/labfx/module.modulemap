@@ -1,0 +1,6 @@
+module LabFX {
+  header "labfx_types.h"
+  header "labfx_parser.h"
+  header "labfx_runtime.h"
+  export *
+}

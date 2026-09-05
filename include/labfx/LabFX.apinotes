@@ -1,0 +1,32 @@
+Name: LabFX
+
+Namespaces:
+  - Name: lab
+    Namespaces:
+      - Name: fx
+        Tags:
+          - Name: labfx
+            SwiftName: Graph
+
+          - Name: Runtime
+            Methods:
+              - Name: build
+                SwiftName: build(_:rootWidth:rootHeight:)
+              - Name: resize
+                SwiftName: resize(rootWidth:rootHeight:)
+              - Name: setMeshCapture
+                SwiftName: setMeshCapture(_:buffer:)
+              - Name: setPassTonemap
+                SwiftName: setPassTonemap(_:tonemap:)
+              - Name: setUniform
+                SwiftName: setUniform(_:type:data:)
+              - Name: bufferTexture
+                SwiftName: texture(_:named:)
+
+        Functions:
+          - Name: parse_labfx
+            SwiftName: parse(_:length:)
+          - Name: parse_labfx_file
+            SwiftName: parse(file:)
+          - Name: free_labfx
+            SwiftName: free(_:)

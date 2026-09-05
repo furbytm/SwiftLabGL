@@ -80,12 +80,16 @@ let package = Package(
         .target(name: "LabFXParser"),
         .target(name: "LabFXShaders"),
       ],
-      path: "LabGL/showcase",
-      sources: [
-        "labfx/labfx_runtime.cpp",
+      path: ".",
+      exclude: [
+        "LabGL/build"
       ],
-      publicHeadersPath: "labfx",
+      sources: [
+        "LabGL/showcase/labfx/labfx_runtime.cpp",
+      ],
+      publicHeadersPath: "include/labfx",
       cxxSettings: [
+        .headerSearchPath("LabGL/showcase/labfx"),
         .headerSearchPath("."),
       ]
     ),
