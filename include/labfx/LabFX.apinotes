@@ -18,6 +18,8 @@ Namespaces:
                 SwiftName: setMeshCapture(_:buffer:)
               - Name: setPassTonemap
                 SwiftName: setPassTonemap(_:tonemap:)
+              - Name: setPassActive
+                SwiftName: setPassActive(_:active:)
               - Name: setUniform
                 SwiftName: setUniform(_:type:data:)
               - Name: bufferTexture
