@@ -797,8 +797,6 @@ Functions:
     SwiftName: gl.renderTargetTexture(target:attachment:texture:)
   - Name: LABGLDISPATCH_glBindRenderTarget
     SwiftName: gl.bindRenderTarget(_:)
-  - Name: LABGLDISPATCH_glBindRenderTargetPreserve
-    SwiftName: gl.bindRenderTargetPreserving(_:)
   - Name: LABGLDISPATCH_glGetRootRenderTarget
     SwiftName: gl.rootRenderTarget()
 
