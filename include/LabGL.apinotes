@@ -739,6 +739,18 @@ Functions:
     SwiftName: gl.deleteInstanceTransforms(count:handles:)
   - Name: LABGLDISPATCH_glInstanceTransformsData
     SwiftName: gl.instanceTransformsData(handle:size:transforms:cullRadius:usage:)
+  - Name: LABGLDISPATCH_glGenInstanceViewports
+    SwiftName: gl.genInstanceViewports(count:)
+  - Name: LABGLDISPATCH_glDeleteInstanceViewports
+    SwiftName: gl.deleteInstanceViewports(count:handles:)
+  - Name: LABGLDISPATCH_glInstanceViewportsData
+    SwiftName: gl.instanceViewportsData(handle:size:viewports:usage:)
+
+  # --- LabGL vertex amplification ---
+  - Name: LABGLDISPATCH_lglSetVertexAmplification
+    SwiftName: gl.setVertexAmplification(viewsHandle:viewportsHandle:count:)
+  - Name: LABGLDISPATCH_lglDisableVertexAmplification
+    SwiftName: gl.disableVertexAmplification()
 
   # --- LabGL capture system ---
   - Name: LABGLDISPATCH_glCallCapture
@@ -799,6 +811,16 @@ Functions:
     SwiftName: gl.bindRenderTarget(_:)
   - Name: LABGLDISPATCH_glGetRootRenderTarget
     SwiftName: gl.rootRenderTarget()
+  - Name: LABGLDISPATCH_lglCreateMemorylessDepthTexture
+    SwiftName: gl.createMemorylessDepthTexture(width:height:layers:internalFormat:)
+  - Name: LABGLDISPATCH_lglCreateTextureArray
+    SwiftName: gl.createTextureArray(width:height:layers:format:)
+  - Name: LABGLDISPATCH_lglShaderImageArgument
+    SwiftName: gl.setShaderImageArgument(_:bufferIndex:texture:)
+  - Name: LABGLDISPATCH_lglShaderBuffer
+    SwiftName: gl.setShaderBuffer(_:index:buffer:)
+  - Name: LABGLDISPATCH_lglShaderVertexBuffer
+    SwiftName: gl.setShaderVertexBuffer(_:index:buffer:)
 
   # --- LabGL managed buffer objects ---
   - Name: LABGLDISPATCH_glBindBuffer
@@ -853,6 +875,18 @@ Functions:
     SwiftName: gl.setComputeShaderThreadgroupSize(_:x:y:z:)
   - Name: LABGLDISPATCH_lglDispatchCompute
     SwiftName: gl.dispatchCompute(_:groupsX:groupsY:groupsZ:)
+  - Name: LABGLDISPATCH_lglDispatchComputeIndirect
+    SwiftName: gl.dispatchComputeIndirect(_:argsBuffer:offsetBytes:)
+  - Name: LABGLDISPATCH_lglCreateComputeReadback
+    SwiftName: gl.createComputeReadback(sizeBytes:ringSize:)
+  - Name: LABGLDISPATCH_lglDeleteComputeReadback
+    SwiftName: gl.deleteComputeReadback(_:)
+  - Name: LABGLDISPATCH_lglComputeShaderReadback
+    SwiftName: gl.setComputeShaderReadback(_:bindingIndex:readback:)
+  - Name: LABGLDISPATCH_lglComputeReadbackLatest
+    SwiftName: gl.computeReadbackLatest(_:size:)
+  - Name: LABGLDISPATCH_lglComputeReadbackCurrentBuffer
+    SwiftName: gl.computeReadbackCurrentBuffer(_:)
 
   # --- LabGL math rendering ---
   - Name: LABGLDISPATCH_glTextMath
@@ -897,6 +931,14 @@ Functions:
     SwiftName: labgl.captureSaveSelective(_:enabled:count:path:)
   - Name: labgl_capturePlayback
     SwiftName: labgl.capturePlayback(_:)
+  - Name: labgl_capturePlaybackIndirectDraws
+    SwiftName: labgl.capturePlaybackIndirectDraws(_:)
+  - Name: labgl_captureEncodeCulled
+    SwiftName: labgl.captureEncodeCulled(_:visibility:offset:slot:instanceStride:)
+  - Name: labgl_capturePlaybackCulled
+    SwiftName: labgl.capturePlaybackCulled(_:slot:)
+  - Name: labgl_captureIndirectDrawBounds
+    SwiftName: labgl.captureIndirectDrawBounds(_:bounds:)
   - Name: labgl_capturePlaybackSelective
     SwiftName: labgl.capturePlaybackSelective(_:enabled:count:)
   - Name: labgl_captureFormatCommand

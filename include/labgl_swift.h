@@ -9,9 +9,13 @@ namespace gl {}
 namespace labgl {}
 
 namespace lgl_typed_detail {
+  constexpr GLenum RGBA = GL_RGBA;
+  constexpr GLenum RGBA32F = GL_RGBA32F;
   constexpr GLenum FLOAT = GL_FLOAT;
   constexpr GLenum FLOAT_MAT4 = GL_FLOAT_MAT4;
+  constexpr GLenum FLOAT_VEC4 = GL_FLOAT_VEC4;
   constexpr GLenum INT = GL_INT;
+  constexpr GLenum INT_VEC4 = GL_INT_VEC4;
   constexpr GLenum UNSIGNED_BYTE = GL_UNSIGNED_BYTE;
   constexpr GLenum UNSIGNED_INT = GL_UNSIGNED_INT;
   constexpr GLenum SAMPLER_2D = GL_SAMPLER_2D;
@@ -65,11 +69,16 @@ namespace lgl_typed_detail {
   constexpr GLenum TONEMAP_TUMBLIN_RUSHMEIER = GL_TONEMAP_TUMBLIN_RUSHMEIER;
   constexpr GLenum TONEMAP_UCHIMURA = GL_TONEMAP_UCHIMURA;
   constexpr GLenum TONEMAP_WARD = GL_TONEMAP_WARD;
+  constexpr GLenum STATIC_DRAW = GL_STATIC_DRAW;
 } // namespace lgl_typed_detail
 
+#undef GL_RGBA
+#undef GL_RGBA32F
 #undef GL_FLOAT
 #undef GL_FLOAT_MAT4
+#undef GL_FLOAT_VEC4
 #undef GL_INT
+#undef GL_INT_VEC4
 #undef GL_UNSIGNED_BYTE
 #undef GL_UNSIGNED_INT
 #undef GL_SAMPLER_2D
@@ -123,10 +132,15 @@ namespace lgl_typed_detail {
 #undef GL_TONEMAP_TUMBLIN_RUSHMEIER
 #undef GL_TONEMAP_UCHIMURA
 #undef GL_TONEMAP_WARD
+#undef GL_STATIC_DRAW
 
+constexpr GLenum GL_RGBA = lgl_typed_detail::RGBA;
+constexpr GLenum GL_RGBA32F = lgl_typed_detail::RGBA32F;
 constexpr GLenum GL_FLOAT = lgl_typed_detail::FLOAT;
 constexpr GLenum GL_FLOAT_MAT4 = lgl_typed_detail::FLOAT_MAT4;
+constexpr GLenum GL_FLOAT_VEC4 = lgl_typed_detail::FLOAT_VEC4;
 constexpr GLenum GL_INT = lgl_typed_detail::INT;
+constexpr GLenum GL_INT_VEC4 = lgl_typed_detail::INT_VEC4;
 constexpr GLenum GL_UNSIGNED_BYTE = lgl_typed_detail::UNSIGNED_BYTE;
 constexpr GLenum GL_UNSIGNED_INT = lgl_typed_detail::UNSIGNED_INT;
 constexpr GLenum GL_SAMPLER_2D = lgl_typed_detail::SAMPLER_2D;
@@ -180,3 +194,4 @@ constexpr GLenum GL_TONEMAP_SRGB = lgl_typed_detail::TONEMAP_SRGB;
 constexpr GLenum GL_TONEMAP_TUMBLIN_RUSHMEIER = lgl_typed_detail::TONEMAP_TUMBLIN_RUSHMEIER;
 constexpr GLenum GL_TONEMAP_UCHIMURA = lgl_typed_detail::TONEMAP_UCHIMURA;
 constexpr GLenum GL_TONEMAP_WARD = lgl_typed_detail::TONEMAP_WARD;
+constexpr GLenum GL_STATIC_DRAW = lgl_typed_detail::STATIC_DRAW;

@@ -20,10 +20,16 @@ Namespaces:
                 SwiftName: setPassTonemap(_:tonemap:)
               - Name: setPassActive
                 SwiftName: setPassActive(_:active:)
+              - Name: renderPass
+                SwiftName: renderPass(_:)
               - Name: setUniform
                 SwiftName: setUniform(_:type:data:)
               - Name: bufferTexture
                 SwiftName: texture(_:named:)
+              - Name: setPassCallback
+                SwiftName: setPassCallback(_:callback:userdata:)
+              - Name: currentWriteTexture
+                SwiftName: writeTexture(_:named:)
 
         Functions:
           - Name: parse_labfx
