@@ -839,6 +839,22 @@ Functions:
   # --- LabGL alien-pipeline backdoor (custom shader pairs) ---
   - Name: LABGLDISPATCH_lglDefineShader
     SwiftName: gl.defineShader(name:vertexGLSL:fragmentGLSL:vertexMSL:fragmentMSL:)
+  - Name: LABGLDISPATCH_lglPrecompileShader
+    SwiftName: gl.precompileShader(name:vertexGLSL:fragmentGLSL:vertexMSL:fragmentMSL:)
+  - Name: LABGLDISPATCH_lglPrecompileShaderVariant
+    SwiftName: gl.precompileShaderVariant(_:renderTarget:blend:blendSource:blendDestination:amplification:flags:)
+  - Name: LABGLDISPATCH_lglWaitShader
+    SwiftName: gl.waitShader(_:)
+  - Name: LABGLDISPATCH_lglPendingShaderCompiles
+    SwiftName: gl.pendingShaderCompiles()
+  - Name: LABGLDISPATCH_lglWaitShaderCompiles
+    SwiftName: gl.waitShaderCompiles()
+  - Name: LABGLDISPATCH_lglShaderCacheOpen
+    SwiftName: gl.shaderCacheOpen(path:)
+  - Name: LABGLDISPATCH_lglShaderCacheTag
+    SwiftName: gl.shaderCacheTag(_:value:)
+  - Name: LABGLDISPATCH_lglShaderCacheFlush
+    SwiftName: gl.shaderCacheFlush()
   - Name: LABGLDISPATCH_lglDeleteShader
     SwiftName: gl.deleteShader(_:)
   - Name: LABGLDISPATCH_lglUseShader
@@ -859,6 +875,10 @@ Functions:
   # --- LabGL compute shaders ---
   - Name: LABGLDISPATCH_lglDefineComputeShader
     SwiftName: gl.defineComputeShader(name:glsl:msl:)
+  - Name: LABGLDISPATCH_lglPrecompileComputeShader
+    SwiftName: gl.precompileComputeShader(name:glsl:msl:)
+  - Name: LABGLDISPATCH_lglWaitComputeShader
+    SwiftName: gl.waitComputeShader(_:)
   - Name: LABGLDISPATCH_lglDeleteComputeShader
     SwiftName: gl.deleteComputeShader(_:)
   - Name: LABGLDISPATCH_lglComputeShaderUniform

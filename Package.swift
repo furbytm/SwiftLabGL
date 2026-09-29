@@ -54,6 +54,9 @@ let package = Package(
         "LabGL/src/capture/labgl_image_metal.mm",
         "LabGL/src/labgl_sysinfo.cpp",
       ],
+      resources: [
+        .process("LabGL/fonts")
+      ],
       publicHeadersPath: "include",
       cxxSettings: [
         .define("BUILDING_LABGL"),
