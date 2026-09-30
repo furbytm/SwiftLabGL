@@ -925,6 +925,8 @@ Functions:
     SwiftName: labgl.destroyWindow(_:)
   - Name: labgl_attachOffscreen
     SwiftName: labgl.attachOffscreen(width:height:)
+  - Name: labgl_attachOffscreenQueue
+    SwiftName: labgl.attachOffscreen(width:height:commandQueue:)
   - Name: labgl_attachCAMetalLayer
     SwiftName: labgl.attach(layer:width:height:)
   - Name: labgl_attachWindow
