@@ -959,8 +959,12 @@ Functions:
     SwiftName: labgl.captureEncodeCulled(_:visibility:offset:slot:instanceStride:)
   - Name: labgl_capturePlaybackCulled
     SwiftName: labgl.capturePlaybackCulled(_:slot:)
+  - Name: labgl_capturePlaybackIndirectCulled
+    SwiftName: labgl.capturePlaybackIndirectCulled(_:slot:)
   - Name: labgl_captureIndirectDrawBounds
     SwiftName: labgl.captureIndirectDrawBounds(_:bounds:)
+  - Name: labgl_captureNextDrawBounds
+    SwiftName: labgl.captureNextDrawBounds(_:)
   - Name: labgl_capturePlaybackSelective
     SwiftName: labgl.capturePlaybackSelective(_:enabled:count:)
   - Name: labgl_captureFormatCommand

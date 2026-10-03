@@ -16,6 +16,8 @@ Namespaces:
                 SwiftName: resize(rootWidth:rootHeight:)
               - Name: setMeshCapture
                 SwiftName: setMeshCapture(_:buffer:)
+              - Name: setMeshCaptureCulledSlot
+                SwiftName: setMeshCaptureCulledSlot(_:slot:)
               - Name: setPassTonemap
                 SwiftName: setPassTonemap(_:tonemap:)
               - Name: setPassActive
