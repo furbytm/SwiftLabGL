@@ -917,6 +917,22 @@ Functions:
     SwiftName: labgl.setWindowHints()
   - Name: labgl_present
     SwiftName: labgl.present(_:)
+  - Name: labgl_lastFrameGPUTime
+    SwiftName: labgl.lastFrameGPUTime()
+  - Name: labgl_upscaleSupported
+    SwiftName: labgl.upscaleSupported()
+  - Name: labgl_upscaleTemporal
+    SwiftName: labgl.upscaleTemporal(color:depth:motion:output:jitterX:jitterY:motionScaleX:motionScaleY:reversedDepth:reset:)
+  - Name: labgl_upscaleSpatial
+    SwiftName: labgl.upscaleSpatial(color:output:)
+  - Name: labgl_textureCompressionSupported
+    SwiftName: labgl.textureCompressionSupported()
+  - Name: labgl_textureImageBC7
+    SwiftName: labgl.textureImageBC7(_:width:height:levels:)
+  - Name: labgl_textureSubImageBC7
+    SwiftName: labgl.textureSubImageBC7(_:level:x:y:width:height:blocks:)
+  - Name: labgl_textureGetBC7
+    SwiftName: labgl.textureGetBC7(_:level:x:y:width:height:blocks:)
   - Name: labgl_resize
     SwiftName: labgl.resize(_:width:height:)
   - Name: labgl_beginFrame

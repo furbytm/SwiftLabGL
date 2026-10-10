@@ -18,6 +18,10 @@ Namespaces:
                 SwiftName: setMeshCapture(_:buffer:)
               - Name: setMeshCaptureCulledSlot
                 SwiftName: setMeshCaptureCulledSlot(_:slot:)
+              - Name: stageBufferSize
+                SwiftName: stageBufferSize(_:width:height:)
+              - Name: rebuildBuffer
+                SwiftName: rebuildBuffer(_:)
               - Name: setPassTonemap
                 SwiftName: setPassTonemap(_:tonemap:)
               - Name: setPassActive
@@ -32,6 +36,8 @@ Namespaces:
                 SwiftName: setPassCallback(_:callback:userdata:)
               - Name: currentWriteTexture
                 SwiftName: writeTexture(_:named:)
+              - Name: bufferDepth
+                SwiftName: bufferDepth(_:)
 
         Functions:
           - Name: parse_labfx

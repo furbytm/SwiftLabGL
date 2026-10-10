@@ -19,6 +19,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.92.0"),
+    .package(url: "https://github.com/furbytm/Nanocolor.git", branch: "main"),
   ],
   targets: [
     .executableTarget(
@@ -30,18 +31,10 @@ let package = Package(
     ),
 
     .target(
-      name: "CNanocolor",
-      path: "Nanocolor",
-      exclude: ["cmake", "CMakeLists.txt", "Nanocolor-Introduction.pdf"],
-      sources: ["nanocolor.c", "nanocolorUtils.c"],
-      publicHeadersPath: "."
-    ),
-
-    .target(
       name: "LabGL",
       dependencies: [
-        .target(name: "CNanocolor"),
         .product(name: "ImGui", package: "imgui"),
+        .product(name: "Nanocolor", package: "Nanocolor"),
       ],
       path: ".",
       exclude: [
@@ -71,6 +64,7 @@ let package = Package(
       ],
       linkerSettings: [
         .linkedFramework("Metal"),
+        .linkedFramework("MetalFX"),
         .linkedFramework("QuartzCore"),
         .linkedFramework("Cocoa"),
       ]
