@@ -19,7 +19,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.92.0"),
-    .package(url: "https://github.com/furbytm/Nanocolor.git", branch: "main"),
+    .package(url: "https://github.com/furbytm/Nanocolor.git", from: "1.0.0"),
   ],
   targets: [
     .executableTarget(
