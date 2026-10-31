@@ -657,6 +657,10 @@ Functions:
     SwiftName: gl.texSubImage1D(target:level:xOffset:width:format:type:pixels:)
   - Name: LABGLDISPATCH_glTexSubImage2D
     SwiftName: gl.texSubImage2D(target:level:xOffset:yOffset:width:height:format:type:pixels:)
+  - Name: LABGLDISPATCH_glTexImage3D
+    SwiftName: gl.texImage3D(target:level:internalFormat:width:height:depth:border:format:type:pixels:)
+  - Name: LABGLDISPATCH_glTexSubImage3D
+    SwiftName: gl.texSubImage3D(target:level:xOffset:yOffset:zOffset:width:height:depth:format:type:pixels:)
   - Name: LABGLDISPATCH_glTranslated
     SwiftName: gl.translate(x:y:z:)
   - Name: LABGLDISPATCH_glTranslatef
@@ -739,6 +743,8 @@ Functions:
     SwiftName: gl.deleteInstanceTransforms(count:handles:)
   - Name: LABGLDISPATCH_glInstanceTransformsData
     SwiftName: gl.instanceTransformsData(handle:size:transforms:cullRadius:usage:)
+  - Name: LABGLDISPATCH_lglInstanceTransformsBuffer
+    SwiftName: gl.instanceTransformsBuffer(_:buffer:)
   - Name: LABGLDISPATCH_glGenInstanceViewports
     SwiftName: gl.genInstanceViewports(count:)
   - Name: LABGLDISPATCH_glDeleteInstanceViewports
@@ -831,6 +837,16 @@ Functions:
     SwiftName: gl.deleteBuffer(_:)
   - Name: LABGLDISPATCH_lglMapBuffer
     SwiftName: gl.mapBuffer(_:)
+  - Name: LABGLDISPATCH_lglCreateBufferFromFile
+    SwiftName: gl.createBuffer(usage:file:)
+  - Name: LABGLDISPATCH_lglBuffersMapFiles
+    SwiftName: gl.buffersMapFiles()
+  - Name: LABGLDISPATCH_lglCreateBufferNoCopy
+    SwiftName: gl.createBuffer(usage:noCopy:length:release:context:)
+  - Name: LABGLDISPATCH_lglGPUMemory
+    SwiftName: gl.gpuMemory(budget:allocated:)
+  - Name: LABGLDISPATCH_lglCreateBufferTexture
+    SwiftName: gl.createBufferTexture(_:width:height:format:)
   - Name: LABGLDISPATCH_lglUnmapBuffer
     SwiftName: gl.unmapBuffer(_:)
   - Name: LABGLDISPATCH_lglGetBufferSize
@@ -977,10 +993,16 @@ Functions:
     SwiftName: labgl.capturePlaybackCulled(_:slot:)
   - Name: labgl_capturePlaybackIndirectCulled
     SwiftName: labgl.capturePlaybackIndirectCulled(_:slot:)
+  - Name: labgl_captureCullInstances
+    SwiftName: labgl.captureCullInstances(_:viewProjection:pixelScale:minPixels:slot:)
+  - Name: labgl_capturePlaybackInstancesCulled
+    SwiftName: labgl.capturePlaybackInstancesCulled(_:slot:)
   - Name: labgl_captureIndirectDrawBounds
     SwiftName: labgl.captureIndirectDrawBounds(_:bounds:)
   - Name: labgl_captureNextDrawBounds
     SwiftName: labgl.captureNextDrawBounds(_:)
+  - Name: labgl_captureNextDrawBase
+    SwiftName: labgl.captureNextDrawBase(_:)
   - Name: labgl_capturePlaybackSelective
     SwiftName: labgl.capturePlaybackSelective(_:enabled:count:)
   - Name: labgl_captureFormatCommand
