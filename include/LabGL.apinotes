@@ -953,6 +953,8 @@ Functions:
     SwiftName: labgl.resize(_:width:height:)
   - Name: labgl_beginFrame
     SwiftName: labgl.beginFrame(_:)
+  - Name: labgl_makeCurrent
+    SwiftName: labgl.makeCurrent(_:)
   - Name: labgl_destroyWindow
     SwiftName: labgl.destroyWindow(_:)
   - Name: labgl_attachOffscreen
@@ -995,6 +997,10 @@ Functions:
     SwiftName: labgl.capturePlaybackIndirectCulled(_:slot:)
   - Name: labgl_captureCullInstances
     SwiftName: labgl.captureCullInstances(_:viewProjection:pixelScale:minPixels:slot:)
+  - Name: labgl_captureCullInstancesViews
+    SwiftName: labgl.captureCullInstances(_:viewProjections:pixelScales:viewCount:minPixels:slot:)
+  - Name: labgl_captureCullInstancesRects
+    SwiftName: labgl.captureCullInstances(_:viewProjections:pixelScales:viewCount:minPixels:rects:rectIndices:rectGrids:slot:)
   - Name: labgl_capturePlaybackInstancesCulled
     SwiftName: labgl.capturePlaybackInstancesCulled(_:slot:)
   - Name: labgl_captureIndirectDrawBounds
@@ -1003,6 +1009,16 @@ Functions:
     SwiftName: labgl.captureNextDrawBounds(_:)
   - Name: labgl_captureNextDrawBase
     SwiftName: labgl.captureNextDrawBase(_:)
+  - Name: labgl_captureNextDrawLod
+    SwiftName: labgl.captureNextDrawLod(_:_:)
+  - Name: labgl_captureLodView
+    SwiftName: labgl.captureLodView(eye:pixelScale:)
+  - Name: labgl_captureInstanceFallbackSlot
+    SwiftName: labgl.captureInstanceFallbackSlot(_:)
+  - Name: labgl_captureFlushInstanceCulls
+    SwiftName: labgl.captureFlushInstanceCulls(_:)
+  - Name: labgl_captureInstanceCullReuse
+    SwiftName: labgl.captureInstanceCullReuse(_:)
   - Name: labgl_capturePlaybackSelective
     SwiftName: labgl.capturePlaybackSelective(_:enabled:count:)
   - Name: labgl_captureFormatCommand
