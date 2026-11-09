@@ -5,25 +5,25 @@ struct LabGLExample
 {
   static func main()
   {
-    LABGLDISPATCH_glViewport(0, 0, 800, 600)
+    gl.viewport(x: 0, y: 0, width: 800, height: 600)
     
-    LABGLDISPATCH_glClearColor(0.1, 0.1, 0.15, 1.0)
-    LABGLDISPATCH_glClear(UInt32(GL_COLOR_BUFFER_BIT))
+    gl.clearColor(red: 0.1, green: 0.1, blue: 0.15, alpha: 1.0)
+    gl.clear(mask: UInt32(GL_COLOR_BUFFER_BIT))
     
-    LABGLDISPATCH_glEnable(UInt32(GL_PBR_MODE))
-    LABGLDISPATCH_glMaterialf(UInt32(GL_FRONT_AND_BACK), UInt32(GL_METALLIC),  0.0)
-    LABGLDISPATCH_glMaterialf(UInt32(GL_FRONT_AND_BACK), UInt32(GL_ROUGHNESS), 0.6)
-    LABGLDISPATCH_glMaterialf(UInt32(GL_FRONT_AND_BACK), UInt32(GL_OCCLUSION), 1.0)
+    gl.enable(UInt32(GL_PBR_MODE))
+    gl.material(face: UInt32(GL_FRONT_AND_BACK), pname: UInt32(GL_METALLIC),  param: 0.0)
+    gl.material(face: UInt32(GL_FRONT_AND_BACK), pname: UInt32(GL_ROUGHNESS), param: 0.6)
+    gl.material(face: UInt32(GL_FRONT_AND_BACK), pname: UInt32(GL_OCCLUSION), param: 1.0)
     
     lglSetIBLDiffuseSGs(0, nil)
     lglSetIBLSpecularSGs(0, nil)
     lglSetIBLReflectionCube(1, 0)
 
-    gl.begin(mode: UInt32(GL_TRIANGLES)) // renamed from LABGLDISPATCH_glBegin in LabGL.apinotes
-    LABGLDISPATCH_glColor3f(1.0, 0.0, 0.0); LABGLDISPATCH_glVertex2f(-0.5, -0.5)
-    LABGLDISPATCH_glColor3f(0.0, 1.0, 0.0); LABGLDISPATCH_glVertex2f( 0.5, -0.5)
-    LABGLDISPATCH_glColor3f(0.0, 0.0, 1.0); LABGLDISPATCH_glVertex2f( 0.0,  0.5)
-    LABGLDISPATCH_glEnd()
+    gl.begin(mode: GL_TRIANGLES)
+    gl.color(red: 1.0, green: 0.0, blue: 0.0); gl.vertex(x: -0.5,  y: -0.5)
+    gl.color(red: 0.0, green: 1.0, blue: 0.0); gl.vertex(x:  0.5,  y: -0.5)
+    gl.color(red: 0.0, green: 1.0, blue: 1.0); gl.vertex(x:  0.0,  y:  0.5)
+    gl.end()
 
     print("[swift] LabGL ok")
   }

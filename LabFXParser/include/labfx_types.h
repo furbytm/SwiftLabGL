@@ -1,1 +1,1 @@
-../../LabGL/showcase/labfx/labfx_types.h
+../../LabGL/include/labfx/labfx_types.h

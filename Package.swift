@@ -82,11 +82,12 @@ let package = Package(
         "LabGL/build"
       ],
       sources: [
-        "LabGL/showcase/labfx/labfx_runtime.cpp",
+        "LabGL/src/labfx/labfx_runtime.cpp",
       ],
       publicHeadersPath: "include/labfx",
       cxxSettings: [
-        .headerSearchPath("LabGL/showcase/labfx"),
+        .headerSearchPath("LabGL/src/labfx"),
+        .headerSearchPath("LabGL/include"),
         .headerSearchPath("."),
       ]
     ),
@@ -96,14 +97,18 @@ let package = Package(
       dependencies: [
         .target(name: "LabFXParser"),
       ],
-      path: "LabGL/showcase/labfx/shaders",
+      path: "LabGL/src/labfx/shaders",
       sources: [
         "labfx_shaders_tonemap.cpp",
         "labfx_shaders_sky.cpp",
         "labfx_shaders_sky_data.cpp",
         "labfx_shaders_ibl.cpp",
       ],
-      publicHeadersPath: "."
+      publicHeadersPath: ".",
+      cxxSettings: [
+        // the shader headers include "labfx/labfx_types.h"
+        .headerSearchPath("../../../include"),
+      ]
     ),
     
     .target(
@@ -111,7 +116,11 @@ let package = Package(
       dependencies: [
         .target(name: "LabText"),
       ],
-      path: "LabFXParser"
+      path: "LabFXParser",
+      cxxSettings: [
+        // the parser source includes "labfx/labfx_parser.h"
+        .headerSearchPath("../LabGL/include"),
+      ]
     ),
 
     .target(

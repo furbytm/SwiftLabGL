@@ -1,1 +1,1 @@
-../../LabGL/showcase/labfx/labfx_parser.h
+../../LabGL/include/labfx/labfx_parser.h
