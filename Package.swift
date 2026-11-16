@@ -18,7 +18,7 @@ let package = Package(
     .executable(name: "LabGLExample", targets: ["LabGLExample"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.92.0"),
+    .package(url: "https://github.com/the-swift-collective/imgui.git", from: "1.92.1"),
     .package(url: "https://github.com/furbytm/Nanocolor.git", from: "1.0.0"),
   ],
   targets: [
@@ -66,7 +66,7 @@ let package = Package(
         .linkedFramework("Metal"),
         .linkedFramework("MetalFX"),
         .linkedFramework("QuartzCore"),
-        .linkedFramework("Cocoa"),
+        .linkedFramework("Cocoa", .when(platforms: [.macOS])),
       ]
     ),
 
