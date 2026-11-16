@@ -38,7 +38,8 @@ let package = Package(
       ],
       path: ".",
       exclude: [
-        "LabGL/build"
+        "LabGL/build",
+        "LabGL/src/backend/metal/labgl_window_metal_rgfw.mm",
       ],
       sources: [
         "LabGL/src/core",
@@ -86,6 +87,7 @@ let package = Package(
       ],
       publicHeadersPath: "include/labfx",
       cxxSettings: [
+        .headerSearchPath("LabGL/vendor"),
         .headerSearchPath("LabGL/src/labfx"),
         .headerSearchPath("LabGL/include"),
         .headerSearchPath("."),
