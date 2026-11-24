@@ -40,6 +40,8 @@ let package = Package(
       exclude: [
         "LabGL/build",
         "LabGL/src/backend/metal/labgl_window_metal_rgfw.mm",
+        // only the rgfw windows of the gl and vulkan backends ask it for pixel sizes
+        "LabGL/src/core/labgl_window_pixels.cpp",
       ],
       sources: [
         "LabGL/src/core",
