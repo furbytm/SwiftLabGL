@@ -122,6 +122,8 @@ let package = Package(
       cxxSettings: [
         // the parser source includes "labfx/labfx_parser.h"
         .headerSearchPath("../LabGL/include"),
+        // and "labfx_diagnostics.h", which sits beside the sources upstream
+        .headerSearchPath("../LabGL/src/labfx"),
       ]
     ),
 
