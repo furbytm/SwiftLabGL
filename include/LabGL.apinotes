@@ -949,6 +949,12 @@ Functions:
     SwiftName: labgl.textureSubImageBC7(_:level:x:y:width:height:blocks:)
   - Name: labgl_textureGetBC7
     SwiftName: labgl.textureGetBC7(_:level:x:y:width:height:blocks:)
+  - Name: labgl_textureASTCSupported
+    SwiftName: labgl.textureASTCSupported()
+  - Name: labgl_textureImageASTC
+    SwiftName: labgl.textureImageASTC(_:width:height:levels:)
+  - Name: labgl_textureSubImageASTC
+    SwiftName: labgl.textureSubImageASTC(_:level:x:y:width:height:blocks:)
   - Name: labgl_resize
     SwiftName: labgl.resize(_:width:height:)
   - Name: labgl_beginFrame
